@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--<properties resource="jdbcConfig.properties">-->
+        <!--<property name="driver" value="com.mysql.jdbc.Driver"></property>-->
+        <!--<property name="url" value="jdbc:mysql://localhost:3306/usermanager"></property>-->
+        <!--<property name="username" value="root"></property>-->
+        <!--<property name="password" value="260214"></property>-->
+    <!--</properties>-->
+    <typeAliases>
+        <package name="cn.itcast.domain"/>
+    </typeAliases>
+    <!--&lt;!&ndash;配置环境&ndash;&gt;-->
+    <!--<environments default="mysql">-->
+        <!--&lt;!&ndash;配置mysql环境&ndash;&gt;-->
+        <!--<environment id="mysql">-->
+            <!--<transactionManager type="JDBC"/>-->
+            <!--&lt;!&ndash;配置数据源&ndash;&gt;-->
+            <!--<dataSource type="POOLED">-->
+                <!--&lt;!&ndash;配置连接数据库的4个基本信息&ndash;&gt;-->
+                <!--<property name="driver" value="${jdbc.driver}"></property>-->
+                <!--<property name="url" value="${jdbc.url}"></property>-->
+                <!--<property name="username" value="${jdbc.username}"></property>-->
+                <!--<property name="password" value="${jdbc.password}"></property>-->
+            <!--</dataSource>-->
+        <!--</environment>-->
+    <!--</environments>-->
+    
+    <!--指定映射的文件配置-->
+    <mappers >
+            <!--<mapper resource="com/itheima/dao/IUserDao.xml"/>-->
+        <!--如果使用注解方法  mapper 这样改-->
+        <!--<mapper class="com.itheima.dao.IUserDao"/>-->
+        <package name="cn.itcast.domain"/>
+    </mappers>
+</configuration>
